@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Heading,
-  Link,
   Image,
   Text,
   Divider,
@@ -18,7 +17,7 @@ import {
   IconButton,
   Icon,
 } from "@chakra-ui/react";
-import Linkn from "next/link";
+import Link from "next/link";
 //import github and linkedin icons
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 const porjects = [
@@ -45,7 +44,7 @@ const porjects = [
   {
     title: "PART HUNT",
     description: `A vanilla JavaScript app that finds part-time jobs`,
-    image: "https://i.imgur.com/f0wWOPt.png",
+    image: "https://i.imgur.com/L4PczDy.png",
     tags: ["Vanilla JS", "CSS", "HTML"],
     link: "https://vteam-201.github.io/PartHunt/",
     github: "https://github.com/Vteam-201/PartHunt",
@@ -103,6 +102,17 @@ export function BlogAuthor(props) {
 const ArticleList = () => {
   return (
     <>
+      <Box zIndex="-1" width="100%" position="absolute" height="100%">
+        <Box
+          bgGradient={useColorModeValue(
+            "radial(green.600 1px, transparent 1px)",
+            "radial(green.600 1px, transparent 1px)"
+          )}
+          backgroundSize="20px 20px"
+          opacity="0.4"
+          height="100%"
+        />
+      </Box>
       <Container maxW={"7xl"} p="12">
         <Box
           marginTop={{ base: "1", sm: "5" }}
@@ -123,14 +133,14 @@ const ArticleList = () => {
               marginLeft={{ base: "0", sm: "5%" }}
               marginTop="5%"
             >
-              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
+              <Box>
                 <Image
                   borderRadius="lg"
                   src={"https://i.imgur.com/zIlyva9.jpg"}
                   alt="some good alt text"
                   objectFit="contain"
                 />
-              </Link>
+              </Box>
             </Box>
           </Box>
           <Box
@@ -143,9 +153,12 @@ const ArticleList = () => {
             <BlogTags tags={["whoami"]} />
 
             <Heading marginTop="1 ">
-              <Link textDecoration="none" _hover={{ textDecoration: "none" }}>
-                My name is Marwan Zakia
-              </Link>
+            My name is
+              <HStack>
+                <div>
+                <div className="diva">Marwan Zakia</div>
+                </div>
+              </HStack>
             </Heading>
             <Text
               as="p"
@@ -157,11 +170,6 @@ const ArticleList = () => {
               technologies and building things that make a difference. I am
               currently looking for an opportunity to contribute and grow my
               skills and knowledge.
-              <Link
-                textDecoration="none"
-                _hover={{ textDecoration: "none" }}
-                href=""
-              ></Link>
             </Text>
           </Box>
         </Box>
@@ -173,16 +181,29 @@ const ArticleList = () => {
 
         {porjects.map((item, i) => {
           return (
-            <Wrap key={i} spacing="30px" marginTop="5">
-              <WrapItem
-                width={{ base: "100%", sm: "45%", md: "45%", lg: "30%" }}
-              >
+            <Wrap key={i} spacing="30px" marginTop="5" w="200">
+              <WrapItem w="200">
                 <Box w="100%">
+                  <HStack marginTop="3">
+                    <BlogTags tags={item.tags} marginTop="3" />
+                    <Icon
+                      name="github"
+                      as={FaGithub}
+                      onClick={() => {
+                        window.open(item.github, "_blank");
+                      }}
+                      Pointer="cursor"
+                    />
+                  </HStack>
+                  <Heading fontSize="xl" marginTop="2">
+                    <Heading>{item.title}</Heading>
+                  </Heading>
+                  <Text as="p" fontSize="md" marginTop="2">
+                    {item.description}
+                  </Text>
+
                   <Box borderRadius="lg" overflow="hidden">
-                    <Link
-                      textDecoration="none"
-                      _hover={{ textDecoration: "none" }}
-                    >
+                    <Box>
                       <Image
                         transform="scale(1.0)"
                         src={item.image}
@@ -193,36 +214,12 @@ const ArticleList = () => {
                         _hover={{
                           transform: "scale(1.05)",
                         }}
+                        onClick={() => {
+                          window.open(item.link, "_blank");
+                        }}
                       />
-                    </Link>
+                    </Box>
                   </Box>
-
-                  <BlogTags tags={item.tags} marginTop="3" />
-                  <Heading fontSize="xl" marginTop="2">
-                    <Link
-                      textDecoration="none"
-                      _hover={{ textDecoration: "none" }}
-                    >
-                      {item.title}
-                    </Link>
-                  </Heading>
-                  <Text as="p" fontSize="md" marginTop="2">
-                    {item.description}
-                  </Text>
-                  <HStack>
-                    <Button
-                      variantColor="blue"
-                      marginRight="2"
-                      onClick={() =>
-                        window === undefined
-                          ? console.log("window is undefined")
-                          : (window.location.href = `${item.github}`)
-                      }
-                    />
-                    <Linkn href={item.github}>
-                      <Icon as={FaGithub} />
-                    </Linkn>
-                  </HStack>
                 </Box>
               </WrapItem>
             </Wrap>
@@ -235,13 +232,20 @@ const ArticleList = () => {
           <Text as="p" fontSize="lg">
             I interested about technology, design, and video games. and
             currently looking for a job in the field of software development.
-            <Link href="https://www.linkedin.com/in/marwan-zakia/" textDecoration="none" _hover={{ textDecoration: "none" }}>
-              {" "}
-              here is my{" "}
-
+            {"  "}
+            <Link href="https://www.linkedin.com/in/marwan-zakia/" passHref>
+              <Icon as={FaLinkedin} />
+            </Link>
+            {"  "} {"  "}
+            and theres a lot more here
+            {"  "}
+            <Link
+              href="https://github.com/Marwan-Zakia?tab=repositories"
+              passHref
+            >
+              <Icon as={FaGithub} />
             </Link>
           </Text>
-          <Text as="p" fontSize="lg"></Text>
         </VStack>
       </Container>
     </>
