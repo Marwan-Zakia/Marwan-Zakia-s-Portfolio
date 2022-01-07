@@ -20,9 +20,9 @@ const theme = extendTheme({ colors });
 function App({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <Header />
+      <Header  />
       <>
-     
+  
       </>
 
       <Component {...pageProps} />

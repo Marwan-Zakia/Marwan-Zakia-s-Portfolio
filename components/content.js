@@ -62,7 +62,7 @@ const porjects = [
 
 const BlogTags = (props) => {
   return (
-    <HStack spacing={1} marginTop={props.marginTop}>
+    <HStack spacing={1} marginTop={props.marginTop} >
       {props.tags.map((tag) => {
         return (
           <Tag
@@ -85,7 +85,7 @@ const BlogTags = (props) => {
 
 export function BlogAuthor(props) {
   return (
-    <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
+    <HStack marginTop="2" spacing="2" display="flex" alignItems="center" >
       <Image
         borderRadius="full"
         boxSize="40px"
