@@ -17,7 +17,7 @@ import { ReactElement } from "react";
 export default function Home() {
   return (
     <>
-  
+   <ArticleList />
     </>
   );
 }

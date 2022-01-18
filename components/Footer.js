@@ -18,8 +18,8 @@ export default function Footer() {
         py={4}
         direction={{ base: "column", md: "row" }}
         spacing={4}
-        justify={{ base: "center", md: "space-between" }}
-        align={{ base: "center", md: "center" }}
+        justify="center" 
+        align="center" 
       >
         <Stack direction={"row"} spacing={6}></Stack>
         <Text>© 2022 made by Marwan Zakia </Text>

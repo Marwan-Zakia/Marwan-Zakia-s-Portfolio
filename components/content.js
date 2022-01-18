@@ -69,18 +69,7 @@ export function BlogAuthor(props) {
 const ArticleList = () => {
   return (
     <>
-      <Box zIndex="-1" position="absolute" width="100%" height="280%">
-        <Box
-          bgGradient={useColorModeValue(
-            "radial(blue.600 1px, transparent 1px)",
-            "radial(green.600 1px, transparent 1px)"
-          )}
-          backgroundSize="20px 20px"
-          opacity="0.4"
-          height={{ md: "200%", lg: "200%", sm: "100%" }}
-          width={{ md: "200%", lg: "100%" }}
-        />
-      </Box>
+     
       <Container maxW={"7xl"} p="12">
         <Box
           marginTop={{ base: "1", sm: "5" }}

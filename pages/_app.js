@@ -1,18 +1,42 @@
 import "../styles/globals.css";
-import { extendTheme, ChakraProvider } from "@chakra-ui/react";
+import {
+  extendTheme,
+  ChakraProvider,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import ArticleList from '../components/content'
-
-
+import ArticleList from "../components/content";
 
 function App({ Component, pageProps }) {
   return (
     <>
-      <ChakraProvider >
-        <Header   />
+      <ChakraProvider>
+        <Box zIndex="-1" position="absolute" width="100%" height="150%">
+          <Box
+            bgGradient={{
+              lg: useColorModeValue(
+                "radial(blue.600 1px, transparent 1px)",
+                "radial(green.600 1px, transparent 1px)"
+              ),
+              md: useColorModeValue(
+                "radial(blue.600 2px, transparent 1px)",
+                "radial(green.600 2px, transparent 1px)"
+              ),
+              sm: useColorModeValue(
+                "radial(blue.600 3px, transparent 1px)",
+                "radial(green.600 3px, transparent 1px)"
+              ),
+            }}
+            backgroundSize="20px 20px"
+            opacity="0.4"
+            height={{ lg: "100%", sm: "100%" }}
+          />
+        </Box>
+        <Header />
         <Component {...pageProps} />
-        <ArticleList />
+
         <Footer />
       </ChakraProvider>
     </>
@@ -20,12 +44,3 @@ function App({ Component, pageProps }) {
 }
 
 export default App;
-
-// export const getStaticProps = async () => {
-//   const content = await import("../content/articles.json");
-//   return {
-//     props: {
-//       articles: content.default,
-//     },
-//   };
-// }
