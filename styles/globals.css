@@ -1,23 +1,22 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media only screen and (max-width: 950px) {
+  .chakra-ui-light {
+    width: 200vw;
+  }
+  .chakra-ui-dark {
+    width: 200vw;
+  }
 }
-
-* {
-  box-sizing: border-box;
+.chakra-ui-light {
+  position: static;
+}
+.chakra-ui-dark {
+  position: static;
 }
 
 .diva {
   width: 13ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -27,12 +26,12 @@ a {
 
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 }
-    
+
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
 }

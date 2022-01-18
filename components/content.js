@@ -13,12 +13,14 @@ import {
   Container,
   VStack,
   Icon,
+  Button,
 } from "@chakra-ui/react";
 
 import Link from "next/link";
 import SimpleThreeColumns from "./skills";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { porjects } from "./data";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { AiOutlineDownload } from "react-icons/ai";
 
 const BlogTags = (props) => {
   return (
@@ -34,6 +36,11 @@ const BlogTags = (props) => {
             opacity="0.4"
             height="100%"
             key={tag}
+            _hover={{
+              transform: "scale(1.06)",
+              opacity: "0.8",
+              color: "white",
+            }}
           >
             {tag}
           </Tag>
@@ -62,15 +69,16 @@ export function BlogAuthor(props) {
 const ArticleList = () => {
   return (
     <>
-      <Box zIndex="-1" width="100%" position="absolute" height="100%">
+      <Box zIndex="-1" position="absolute" width="100%" height="280%">
         <Box
           bgGradient={useColorModeValue(
-            "radial(green.600 1px, transparent 1px)",
+            "radial(blue.600 1px, transparent 1px)",
             "radial(green.600 1px, transparent 1px)"
           )}
           backgroundSize="20px 20px"
           opacity="0.4"
-          height="100%"
+          height={{ md: "200%", lg: "200%", sm: "100%" }}
+          width={{ md: "200%", lg: "100%" }}
         />
       </Box>
       <Container maxW={"7xl"} p="12">
@@ -130,6 +138,53 @@ const ArticleList = () => {
               technologies and building things that make a difference. I am
               currently looking for an opportunity to contribute and grow my
               skills and knowledge.
+              <br />
+              Follow Me on
+              {"  "}
+              <Link href="https://www.linkedin.com/in/marwan-zakia/" passHref>
+                <Icon
+                  as={FaLinkedin}
+                  _hover={{
+                    transform: "scale(1.5)",
+                  }}
+                />
+              </Link>
+              {"  "}
+              {"  "}
+              and
+              {"  "}
+              {"  "}
+              <Link
+                href="https://github.com/Marwan-Zakia?tab=repositories"
+                passHref
+              >
+                <Icon
+                  as={FaGithub}
+                  _hover={{
+                    transform: "scale(1.5)",
+                  }}
+                />
+              </Link>
+              {"  "}
+              {"  "}
+              and be sure download my resume
+              {"  "}
+              <Link
+                href={
+                  "https://drive.google.com/uc?id=1kiHZTwUgKphbtjT4omAwlvaoGTNrCl-u&export=download"
+                }
+                download={`https://drive.google.com/uc?id=1kiHZTwUgKphbtjT4omAwlvaoGTNrCl-u&export=download`}
+                title="Marwan Zakia Resume"
+                target="_blank"
+                passHref
+              >
+                <Icon
+                  as={AiOutlineDownload}
+                  _hover={{
+                    transform: "scale(1.5)",
+                  }}
+                />
+              </Link>
             </Text>
           </Box>
         </Box>
@@ -147,6 +202,9 @@ const ArticleList = () => {
                   <HStack marginTop="3">
                     <BlogTags tags={item.tags} marginTop="3" />
                     <Icon
+                      _hover={{
+                        transform: "scale(1.5)",
+                      }}
                       name="github"
                       as={FaGithub}
                       onClick={() => {
@@ -198,16 +256,47 @@ const ArticleList = () => {
             currently looking for a job in the field of software development.
             {"  "}
             <Link href="https://www.linkedin.com/in/marwan-zakia/" passHref>
-              <Icon as={FaLinkedin} />
+              <Icon
+                as={FaLinkedin}
+                _hover={{
+                  transform: "scale(1.5)",
+                }}
+              />
             </Link>
             {"  "} {"  "}
             and theres a lot more here
+            {"  "}
             {"  "}
             <Link
               href="https://github.com/Marwan-Zakia?tab=repositories"
               passHref
             >
-              <Icon as={FaGithub} />
+              <Icon
+                as={FaGithub}
+                _hover={{
+                  transform: "scale(1.5)",
+                }}
+              />
+            </Link>
+            {"  "}
+            {"  "}
+            Download my resume
+            {"  "}
+            <Link
+              href={
+                "https://drive.google.com/uc?id=1kiHZTwUgKphbtjT4omAwlvaoGTNrCl-u&export=download"
+              }
+              download={`https://drive.google.com/uc?id=1kiHZTwUgKphbtjT4omAwlvaoGTNrCl-u&export=download`}
+              title="Marwan Zakia Resume"
+              target="_blank"
+              passHref
+            >
+              <Icon
+                as={AiOutlineDownload}
+                _hover={{
+                  transform: "scale(1.5)",
+                }}
+              />
             </Link>
           </Text>
         </VStack>
