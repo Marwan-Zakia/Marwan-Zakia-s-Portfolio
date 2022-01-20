@@ -6,21 +6,21 @@
     width: 200vw;
   }
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (min-width: 300px) {
   .css-1duqb5v {
     position:absolute;
     z-index: -1;
     background-size:20px 20px;
     background-image: radial-gradient(
-      var(--chakra-colors-blue-600) 2px,
-      var(--chakra-colors-transparent) 1px
+      var(--chakra-colors-blue-600) 1.5px,
+      var(--chakra-colors-transparent) 1.5px
     );
   }
   .css-1duqb5v {
 
     background-image: radial-gradient(
-      var(--chakra-colors-blue-600) 2px,
-      var(--chakra-colors-transparent) 1px
+      var(--chakra-colors-blue-600) 1px,
+      var(--chakra-colors-transparent) 1.5px
     );
   }
 }

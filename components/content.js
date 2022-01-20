@@ -108,7 +108,6 @@ const ArticleList = () => {
             marginTop={{ base: "3", sm: "0" }}
           >
             <BlogTags tags={["whoami"]} />
-
             <Heading marginTop="1 ">
               My name is
               <HStack>
