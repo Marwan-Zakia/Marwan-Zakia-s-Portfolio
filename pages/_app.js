@@ -32,6 +32,7 @@ function App({ Component, pageProps }) {
             opacity="0.4"
             height={{ lg: "100%", sm: "100%" }}
           />
+          
         </Box>
         <Header />
         <Component {...pageProps} />
