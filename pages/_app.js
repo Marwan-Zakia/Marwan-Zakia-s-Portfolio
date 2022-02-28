@@ -20,8 +20,8 @@ function App({ Component, pageProps }) {
                 "radial(green.600 1px, transparent 1px)"
               ),
               md: useColorModeValue(
-                "radial(blue.600 1.5px, transparent 2px)",
-                "radial(green.600 1.5px, transparent 2px)"
+                "radial(blue.600 1.5px, transparent 1.5px)",
+                "radial(green.600 1.5px, transparent 1.5px)"
               ),
               sm: useColorModeValue(
                 "radial(blue.600 1px, transparent 1px)",
