@@ -98,9 +98,8 @@ const ArticleList = () => {
 						>
 							<Image
 								borderRadius="lg"
-								src={"https://i.imgur.com/zIlyva9.jpg"}
+								src={"https://i.imgur.com/QiGAP7u.jpg"}
 								alt="some good alt text"
-							
 							/>
 						</Box>
 					</Box>
@@ -166,9 +165,9 @@ const ArticleList = () => {
 							{"  "}
 							<Link
 								href={
-									"https://drive.google.com/uc?id=1t_4t7jAfzbI559j9R--vrGt9saEMGgjq&export=download"
+									" https://drive.google.com/uc?id=1sc0ewkXnnL_8KkYU4Llxto0FRwlseRzC&export=download"
 								}
-								download={`https://drive.google.com/uc?id=1t_4t7jAfzbI559j9R--vrGt9saEMGgjq&export=download`}
+								download={`https://drive.google.com/uc?id=1sc0ewkXnnL_8KkYU4Llxto0FRwlseRzC&export=download`}
 								title="Marwan Zakia Resume"
 								target="_blank"
 								passHref
@@ -283,9 +282,9 @@ const ArticleList = () => {
 						{"  "}
 						<Link
 							href={
-								"https://drive.google.com/uc?id=1t_4t7jAfzbI559j9R--vrGt9saEMGgjq&export=download"
+								" https://drive.google.com/uc?id=1sc0ewkXnnL_8KkYU4Llxto0FRwlseRzC&export=download"
 							}
-							download={`https://drive.google.com/uc?id=1t_4t7jAfzbI559j9R--vrGt9saEMGgjq&export=download`}
+							download={` https://drive.google.com/uc?id=1sc0ewkXnnL_8KkYU4Llxto0FRwlseRzC&export=download`}
 							title="Marwan Zakia Resume"
 							target="_blank"
 							passHref

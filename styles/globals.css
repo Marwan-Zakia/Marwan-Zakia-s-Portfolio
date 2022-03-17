@@ -1,28 +1,29 @@
+/** @format */
+
 @media only screen and (max-width: 950px) {
-  .chakra-ui-light {
-    width: 200vw;
-  }
-  .chakra-ui-dark {
-    width: 200vw;
-  }
+	.chakra-ui-light {
+		width: 200vw;
+	}
+	.chakra-ui-dark {
+		width: 200vw;
+	}
 }
 @media only screen and (min-width: 300px) {
-  .css-1duqb5v {
-    position:absolute;
-    z-index: -1;
-    background-size:20px 20px;
-    background-image: radial-gradient(
-      var(--chakra-colors-blue-600) 1.5px,
-      var(--chakra-colors-transparent) 1.5px
-    );
-  }
-  .css-1duqb5v {
-
-    background-image: radial-gradient(
-      var(--chakra-colors-blue-600) 1px,
-      var(--chakra-colors-transparent) 1.5px
-    );
-  }
+	.css-1duqb5v {
+		position: absolute;
+		z-index: -1;
+		background-size: 20px 20px;
+		background-image: radial-gradient(
+			var(--chakra-colors-blue-600) 1.5px,
+			var(--chakra-colors-transparent) 1.5px
+		);
+	}
+	.css-1duqb5v {
+		background-image: radial-gradient(
+			var(--chakra-colors-blue-600) 1px,
+			var(--chakra-colors-transparent) 1.5px
+		);
+	}
 }
 
 /* .chakra-ui-light {
@@ -36,23 +37,27 @@
 } */
 
 .diva {
-  width: 13ch;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 1em;
+	width: 13ch;
+	animation: typing 5s steps(22) infinite,
+		blink 0.5s step-end infinite alternate;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: 3px solid;
+	font-family: monospace;
+	font-size: 1em;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
+	from {
+		width: 0;
+	}
+	to {
+		width: 13ch;
+	}
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+	50% {
+		border-color: transparent;
+	}
 }
