@@ -101,7 +101,7 @@ export const Skills = [
 		title: "React Native",
 		description:
 			"React Native is an open-source mobile application framework created by Facebook. It is designed to make it easier to build native apps using React. It is based on React, the open-source JavaScript library for building user interfaces.",
-		work: `I have used React Native and i know the defrence between native and web apps and with that i'm able to build native apps`,
+		work: `I have used React Native and i'm able to build native apps`,
 	},
 
 	{
