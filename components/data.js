@@ -1,3 +1,5 @@
+/** @format */
+
 import { FaNodeJs, FaReact, FaSass } from "react-icons/fa";
 import {
 	SiExpressServer,
@@ -283,41 +285,49 @@ export const Skills = [
 ];
 
 export const porjects = [
-  {
-    title: "Funter",
-    description: ` A react application that lets people contribute to 2021 
-        trends, specifically games, movies, and cryptocurrencies`,
-    image: "https://i.imgur.com/f0wWOPt.png",
-    tags: ["React", "NodeJS", "Express", "MongoDB"],
-    link: "https://funter.netlify.app/",
-    github: "https://github.com/Code-stalkers",
-  },
-  {
-    title: "Tangled",
-    description: `A next js application Tangled is an everyday customer 
+	{
+		title: "Tangled",
+		description: `A next js application Tangled is an everyday customer 
       relationship management system to help you keep track of 
       your customers, tasks, appointments, etc. The Tangled is 
       offered as an open-source`,
-    image: "https://i.imgur.com/BIul5mu.png",
-    tags: ["Nextjs", "NodeJS", "Express", "Postgres", "socket.io", "Redux"],
-    link: "https://tangeld11.netlify.app/",
-    github: "https://github.com/support-team-codefellows",
-  },
-  {
-    title: "PART HUNT",
-    description: `A vanilla JavaScript app that finds part-time jobs`,
-    image: "https://i.imgur.com/L4PczDy.png",
-    tags: ["Vanilla JS", "CSS", "HTML"],
-    link: "https://vteam-201.github.io/PartHunt/",
-    github: "https://github.com/Vteam-201/PartHunt",
-  },
+		image: "https://i.imgur.com/BIul5mu.png",
+		tags: [
+			"Nextjs",
+			"NodeJS",
+			"Express",
+			"Postgres",
+			"socket.io",
+			"Redux",
+		],
+		link: "https://tangeld11.netlify.app/",
+		github: "https://github.com/support-team-codefellows",
+	},
+	{
+		title: "Funter",
+		description: ` A react application that lets people contribute to 2021 
+        trends, specifically games, movies, and cryptocurrencies`,
+		image: "https://i.imgur.com/f0wWOPt.png",
+		tags: ["React", "NodeJS", "Express", "MongoDB"],
+		link: "https://funter.netlify.app/",
+		github: "https://github.com/Code-stalkers",
+	},
 
-  {
-    title: "Store",
-    description: `A react application that lets users  look for items they are interested in, and add them to their cart. it also lets users checkout and pay for their cart. in the project we learnd redux, redux tool-kit and redux-thunk`,
-    image: "https://i.imgur.com/qn7qZPA.png",
-    tags: ["React", "NodeJS", "Express", "Postgres", "Redux"],
-    link: "https://store401front.netlify.app/",
-    github: "https://github.com/Marwan-Zakia/storefront-",
-  },
+	{
+		title: "PART HUNT",
+		description: `A vanilla JavaScript app that finds part-time jobs`,
+		image: "https://i.imgur.com/L4PczDy.png",
+		tags: ["Vanilla JS", "CSS", "HTML"],
+		link: "https://vteam-201.github.io/PartHunt/",
+		github: "https://github.com/Vteam-201/PartHunt",
+	},
+
+	{
+		title: "Store",
+		description: `A react application that lets users  look for items they are interested in, and add them to their cart. it also lets users checkout and pay for their cart. in the project we learnd redux, redux tool-kit and redux-thunk`,
+		image: "https://i.imgur.com/qn7qZPA.png",
+		tags: ["React", "NodeJS", "Express", "Postgres", "Redux"],
+		link: "https://store401front.netlify.app/",
+		github: "https://github.com/Marwan-Zakia/storefront-",
+	},
 ];

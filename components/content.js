@@ -4,7 +4,6 @@ import React from "react";
 import {
 	Box,
 	Heading,
-	Image,
 	Text,
 	Divider,
 	HStack,
@@ -23,6 +22,8 @@ import SimpleThreeColumns from "./skills";
 import { porjects } from "./data";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineDownload } from "react-icons/ai";
+import Head from "next/head";
+import Image from "next/image";
 
 const BlogTags = (props) => {
 	return (
@@ -52,26 +53,26 @@ const BlogTags = (props) => {
 	);
 };
 
-export function BlogAuthor(props) {
-	return (
-		<HStack
-			marginTop="2"
-			spacing="2"
-			display="flex"
-			alignItems="center"
-		>
-			<Image
-				borderRadius="full"
-				boxSize="40px"
-				src="https://100k-faces.glitch.me/random-image"
-				alt={`Avatar of ${props.name}`}
-			/>
-			<Text fontWeight="medium">{props.name}</Text>
-			<Text>—</Text>
-			<Text>{props.date.toLocaleDateString()}</Text>
-		</HStack>
-	);
-}
+// export function BlogAuthor(props) {
+// 	return (
+// 		<HStack
+// 			marginTop="2"
+// 			spacing="2"
+// 			display="flex"
+// 			alignItems="center"
+// 		>
+// 			<Image
+// 				borderRadius="full"
+// 				boxSize="40px"
+// 				src="https://100k-faces.glitch.me/random-image"
+// 				alt={`Avatar of ${props.name}`}
+// 			/>
+// 			<Text fontWeight="medium">{props.name}</Text>
+// 			<Text>—</Text>
+// 			<Text>{props.date.toLocaleDateString()}</Text>
+// 		</HStack>
+// 	);
+// }
 
 const ArticleList = () => {
 	return (
@@ -97,9 +98,14 @@ const ArticleList = () => {
 							marginTop="5%"
 						>
 							<Image
-								borderRadius="lg"
-								src={"https://i.imgur.com/QiGAP7u.jpg"}
-								alt="some good alt text"
+							priority={true}
+								width={500}
+								height={500}
+								className='image'
+								src={`/api/imageGetter?url=${encodeURIComponent(
+									"https://i.imgur.com/LMK3W8n.jpg",
+								)}`}
+								alt="Marwan Zakia"
 							/>
 						</Box>
 					</Box>
@@ -213,25 +219,20 @@ const ArticleList = () => {
 									<Text as="p" fontSize="md" marginTop="2">
 										{item.description}
 									</Text>
-
-									<Box borderRadius="lg" overflow="hidden">
-										<Box>
-											<Image
-												transform="scale(1.0)"
-												src={item.image}
-												alt="some text"
-												objectFit="contain"
-												width="100%"
-												transition="0.3s ease-in-out"
-												_hover={{
-													transform: "scale(1.05)",
-												}}
-												onClick={() => {
-													window.open(item.link, "_blank");
-												}}
-											/>
-										</Box>
-									</Box>
+									<div className="imgtag">
+										<Image
+											className="imgMap"
+											src={`/api/imageGetter?url=${encodeURIComponent(
+												item.image,
+											)}`}
+											height={500}
+											width={1100}
+											alt={item.title}
+											onClick={() => {
+												window.open(item.link, "_blank");
+											}}
+										/>
+									</div>
 								</Box>
 							</WrapItem>
 						</Wrap>

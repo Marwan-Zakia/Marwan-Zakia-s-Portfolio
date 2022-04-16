@@ -13,11 +13,13 @@ import {
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import ArticleList from "..//components/content";
 import { ReactElement } from "react";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <>
-   <ArticleList />
-    </>
-  );
+		<>
+
+			<ArticleList />
+		</>
+	);
 }
