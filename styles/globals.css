@@ -61,3 +61,22 @@
 		border-color: transparent;
 	}
 }
+
+.imgtag {
+	object-fit: contain;
+	margin: 10px 0;
+}
+.imgMap {
+	padding: 0;
+	object-fit: contain;
+	border-radius: 3em !important;
+}
+.imgMap:hover,
+.imgMap:focus {
+	transition: " 0.3s ease-in-out";
+	transform: scale(1.05);
+}
+.image{
+object-fit: cover;
+	border-radius: .65em !important;
+}
