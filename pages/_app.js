@@ -12,38 +12,38 @@ import Head from "next/head";
 function App({ Component, pageProps }) {
   return (
 		<>
-			<ChakraProvider>
-				<Head>
-					<title>Marwan Zakia`s portfolio</title>
-					<meta
-						property="og:title"
-						content="Marwan Zakia's portfolio"
-						key="title"
-					/>
-					<meta
-						property="og:image"
-						content="Marwan Zakia image"
-						key="image"
-					/>
-					<meta
-						property="og:title"
-						content="Marwan Zakia "
-						key="marwan"
-					/>
-					<meta property="og:title" content="Marwan" key="name" />
-					<meta
-						name="viewport"
-						content="initial-scale=1.0, width=device-width"
-					/>
-					<meta
-						name="description"
-						content="Marwan Zakia is a full stack developer. I am passionate about
+			<Head>
+				<title>Marwan Zakia`s portfolio</title>
+				<meta
+					property="og:title"
+					content="Marwan Zakia's portfolio"
+					key="title"
+				/>
+				<meta
+					property="og:image"
+					content="Marwan Zakia image"
+					key="image"
+				/>
+				<meta
+					property="og:title"
+					content="Marwan Zakia "
+					key="marwan"
+				/>
+				<meta property="og:title" content="Marwan" key="name" />
+				<meta
+					name="viewport"
+					content="initial-scale=1.0, width=device-width"
+				/>
+				<meta
+					name="description"
+					content="Marwan Zakia is a full stack developer. I am passionate about
 							learning new technologies and building things that make
 							a difference. I am currently looking for an opportunity
 							to contribute and grow my skills and knowledge."
-						key="description"
-					/>
-				</Head>
+					key="description"
+				/>
+			</Head>
+			<ChakraProvider>
 				<Box
 					zIndex="-1"
 					position="absolute"
